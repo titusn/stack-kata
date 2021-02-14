@@ -47,4 +47,12 @@ public class StackTest {
         stack.push(1978);
         assertEquals(1978, stack.pop());
     }
+
+    @Test
+    public void AfterPushingXThenYShouldPopYThenX(){
+        stack.push(69);
+        stack.push(55);
+        assertEquals(55, stack.pop());
+        assertEquals(69, stack.pop());
+    }
 }
