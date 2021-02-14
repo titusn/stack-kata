@@ -62,4 +62,13 @@ public class StackTest {
         stack.push(119);
         assertEquals(119, stack.pop());
     }
+
+    @Test
+    public void AfterInitializationToSizeOneStackShouldAllowToPushTwoValues() {
+        stack = new Stack(1);
+        stack.push(119);
+        stack.push(120);
+        assertEquals(120, stack.pop());
+        assertEquals(119, stack.pop());
+    }
 }

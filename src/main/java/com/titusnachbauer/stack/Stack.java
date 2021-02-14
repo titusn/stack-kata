@@ -19,6 +19,9 @@ public class Stack {
     }
 
     public void push(int element) {
+        if (count == elements.length) {
+            increaseStorage();
+        }
         this.elements[count] = element;
         count++;
     }
@@ -29,4 +32,11 @@ public class Stack {
         }
         return elements[--count];
     }
+
+    private void increaseStorage() {
+        int[] newArray = new int[count + 1];
+        System.arraycopy(elements, 0, newArray, 0, count);
+        elements = newArray;
+    }
+
 }
