@@ -12,6 +12,9 @@ public class Stack {
     }
 
     public int pop() {
+        if (isEmpty()) {
+            throw new Underflow();
+        }
         isEmpty = true;
         return 1;
     }

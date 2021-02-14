@@ -1,4 +1,5 @@
 import com.titusnachbauer.stack.Stack;
+import com.titusnachbauer.stack.Underflow;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -22,5 +23,12 @@ public class StackTest {
         stack.push(1);
         stack.pop();
         assertTrue(stack.isEmpty());
+    }
+
+    @Test
+    public void PopOnEmptyStackShouldThrowUnderflow() {
+        assertThrows(
+                Underflow.class,
+                () -> stack.pop());
     }
 }
