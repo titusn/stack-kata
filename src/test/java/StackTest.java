@@ -55,4 +55,11 @@ public class StackTest {
         assertEquals(55, stack.pop());
         assertEquals(69, stack.pop());
     }
+
+    @Test
+    public void AfterInitalizationToSizeOneStackShouldAllowToPushOneValue() {
+        stack = new Stack(1);
+        stack.push(119);
+        assertEquals(119, stack.pop());
+    }
 }
