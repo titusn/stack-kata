@@ -1,21 +1,21 @@
 package com.titusnachbauer.stack;
 
 public class Stack {
-    private boolean isEmpty = true;
+    private int count = 0;
 
     public boolean isEmpty() {
-        return isEmpty;
+        return (count == 0);
     }
 
     public void push(int i) {
-        isEmpty = false;
+        count++;
     }
 
     public int pop() {
         if (isEmpty()) {
             throw new Underflow();
         }
-        isEmpty = true;
+        count--;
         return 1;
     }
 }

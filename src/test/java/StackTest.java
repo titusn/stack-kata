@@ -31,4 +31,12 @@ public class StackTest {
                 Underflow.class,
                 () -> stack.pop());
     }
+
+    @Test
+    public void AfterTwoPushesAndOnePopStackShouldNotBeEmpty() {
+        stack.push(1);
+        stack.push(2);
+        stack.pop();
+        assertFalse(stack.isEmpty());
+    }
 }
