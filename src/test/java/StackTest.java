@@ -39,4 +39,12 @@ public class StackTest {
         stack.pop();
         assertFalse(stack.isEmpty());
     }
+
+    @Test
+    public void AfterPushingXStackShouldPopX(){
+        stack.push(15);
+        assertEquals(15, stack.pop());
+        stack.push(1978);
+        assertEquals(1978, stack.pop());
+    }
 }
