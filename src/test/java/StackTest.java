@@ -13,27 +13,27 @@ public class StackTest {
     }
 
     @Test
-    public void AfterPushStackShouldNotBeEmpty() {
+    public void afterPushStackShouldNotBeEmpty() {
         stack.push(1);
         assertFalse(stack.isEmpty());
     }
 
     @Test
-    public void AfterPushAndPopStackShouldBeEmpty() {
+    public void afterPushAndPopStackShouldBeEmpty() {
         stack.push(1);
         stack.pop();
         assertTrue(stack.isEmpty());
     }
 
     @Test
-    public void PopOnEmptyStackShouldThrowUnderflow() {
+    public void popOnEmptyStackShouldThrowUnderflow() {
         assertThrows(
                 Underflow.class,
                 () -> stack.pop());
     }
 
     @Test
-    public void AfterTwoPushesAndOnePopStackShouldNotBeEmpty() {
+    public void afterTwoPushesAndOnePopStackShouldNotBeEmpty() {
         stack.push(1);
         stack.push(2);
         stack.pop();
@@ -41,7 +41,7 @@ public class StackTest {
     }
 
     @Test
-    public void AfterPushingXStackShouldPopX(){
+    public void afterPushingXStackShouldPopX(){
         stack.push(15);
         assertEquals(15, stack.pop());
         stack.push(1978);
@@ -49,7 +49,7 @@ public class StackTest {
     }
 
     @Test
-    public void AfterPushingXThenYShouldPopYThenX(){
+    public void afterPushingXThenYShouldPopYThenX(){
         stack.push(69);
         stack.push(55);
         assertEquals(55, stack.pop());
@@ -57,14 +57,14 @@ public class StackTest {
     }
 
     @Test
-    public void AfterInitalizationToSizeOneStackShouldAllowToPushOneValue() {
+    public void afterInitalizationToSizeOneStackShouldAllowToPushOneValue() {
         stack = new Stack(1);
         stack.push(119);
         assertEquals(119, stack.pop());
     }
 
     @Test
-    public void AfterInitializationToSizeOneStackShouldAllowToPushTwoValues() {
+    public void afterInitializationToSizeOneStackShouldAllowToPushTwoValues() {
         stack = new Stack(1);
         stack.push(119);
         stack.push(120);
