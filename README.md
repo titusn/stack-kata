@@ -7,4 +7,5 @@ Steps:
 - After two pushes and one pop, stack should not be empty
 - After pushing X to stack, pop should return X
 - After pushing X, then Y to stack, pop should return Y, then X
-- After initializing stack to size 2, stack should allow to push exactly 2 values
+- When initializing a stack we should be able to set a size
+- After initializing stack to size 2, then pushing 3 values, stack should throw and Overflow exception
